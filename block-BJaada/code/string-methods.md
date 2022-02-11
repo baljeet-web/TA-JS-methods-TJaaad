@@ -32,11 +32,18 @@ Example:
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+
+'ARYA STARK'
+
 3. `toLowerCase`
+
+'arya stark'
 4. `trim`
+'Arya Stark'
 5. `trimEnd`
 6. `trimStart`
 7. `concat`
+
 8. `endsWith`
 9. `includes`
 10. `indexOf`
