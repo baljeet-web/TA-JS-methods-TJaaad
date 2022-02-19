@@ -11,13 +11,31 @@ let words = [
 
 // - Write a function findLongestWord that takes an array of words and returns the longest word from the array. (Use above array "words" to test it). If there are 2 with the same length, it should return the first occurrence.
 
+var findLongestWord = [...words].sort((a,b) => a.length-b.length).pop();
+console.log(findLongestWord);
+
+
 // - Convert the above array "words" into an array of length of word instead of word.
+
+let wordsLength = [...words].map((word)=>word.length);
+console.log(wordsLength);
+
 
 // - Create a new array that only contains word with atleast one vowel.
 
+
+let wordWithVowels = 
+words.filter(word=>(word.includes(`a`)||word.includes(`e`)||word.includes(`i`)||word.includes(`o`)||word.includes(`u`)))
+console.log(wordWithVowels,`hello`);
+
+
 // - Find the index of the word "rhythm"
+console.log(words.indexOf(`rhythm`));
 
 // - Create a new array that contians words not starting with vowel.
+
+let wordsNSWVowels = words.filter(word=>!(word.startsWith(`a`)||word.startsWith(`e`)||word.startsWith(`i`)||word.startsWith(`o`)||word.startsWith(`u`)))
+console.log(wordsNSWVowels)
 
 // - Create a new array that contianse words not ending with vowel
 
@@ -25,7 +43,11 @@ let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // - Create a sumArray function that takes an array of number as a parameter, and calculate the sum of all its numbers
 
+
+
 // - Make a new array that contains number multiplied by 3 like [6, 18, 27 ...]
+
+
 
 // - Create a new array that contains only even numbers
 
