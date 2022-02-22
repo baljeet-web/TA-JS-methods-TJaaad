@@ -17,17 +17,49 @@ let persons = [
 
 // Find the average grade
 
+let grades = persons.map((person)=>person.grade);
+let sumOfGrades = grades.reduce((acc,Cv)=>acc+Cv);
+let averageGrades= sumOfGrades/grades.length;
+console.log(`The Average grade is ${averageGrades}`);
+
+
+
 // Find the average grade of male
+
+let maleGrades = persons.filter((person)=>person.sex==`M`).map((person)=>person.grade);
+
+let sumOfMaleGrades = maleGrades.reduce((acc,Cv)=>acc+Cv);
+
+let averageOfMaleGrades= sumOfMaleGrades/maleGrades.length;
+
+console.log(`The average grade of males is ${averageOfMaleGrades}`);
 
 // Find the average grade of female
 
+let femaleGrades = persons.filter((person)=>person.sex==`F`).map((person)=>person.grade);
+
+let sumOfFemaleGrades = femaleGrades.reduce((acc,Cv)=>acc+Cv);
+
+let averageOfFemaleGrades= sumOfFemaleGrades/femaleGrades.length;
+
+console.log(`The average grade of males is ${averageOfFemaleGrades}`);
+
 // Find the highest grade
+let highestGrade = grades.sort((a,b)=>a-b).pop();
+console.log(`The highest grade is ${highestGrade}`);
 
 // Find the highest grade in male
+let highestGradeInMale = maleGrades.sort((a,b)=>a-b).pop();
+console.log(`The highest grade for males is ${highestGradeInMale}`);
 
 // Find the highest grade in female
+let highestGradeInFemale = femaleGrades.sort((a,b)=>a-b).pop();
+console.log(`The highest grade for females is ${highestGradeInFemale}`);
 
-// Find the highest grade for people whose name starts with 'J' or 'P'
+// Find the highest grade for people whose name starts with 'J' or 'P'.
+
+
+
 
 const fruitBasket = [
   'banana',
